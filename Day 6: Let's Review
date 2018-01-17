@@ -61,7 +61,7 @@ public class Solution {
         }
         //after loop is complete print even space and odd strings (collection of characters) 
         System.out.print(even +" "+ odd );
-        // Print a new line at the end
+        // Print a new line to seperate the testcase onto new lines
         System.out.println();
     }
 }
