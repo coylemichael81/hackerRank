@@ -9,37 +9,59 @@ public class Solution {
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
         Scanner scan = new Scanner(System.in);
+        //T is the number of testcases or lines of input
         int T = scan.nextInt();
         scan.nextLine();
         String S = new String();
         ArrayList<String> ListOfS = new ArrayList<String>();
 
-
+        // assign each testcase to an arraylist  ListofS
         for(int i=0;i<T;i++){
             S= scan.nextLine();
             ListOfS.add(S);
 
         }
+        
+        //call each testbase one at a time and pass the string to the method printMyLine
         for (String line:ListOfS
              ) {
             printMyLine(line);
         }
 
     }
+    
+    
     static void printMyLine(String line){
+        
+        // Take the string passed and assign each character to an array of char
+        // e.g fred  becomes 
+        [0] = f
+        [1] = r
+        [2] = e
+        [3] = d
+        
         char[] scanned = line.toCharArray();
+        
+        // 
         String even = new String();
         String odd = new String();
+        
+        // Print each sequential character on the same line
         for(int i = 0; i < line.length(); i++){
-            // Print each sequential character on the same line
+            // modulus operator( %) dived 2 number and the result is the remainder 
+            // if the remainer equals zero , then the number (index in this case) is even
             if (i%2 ==0){
+            //assigned even characters to even string
                 even = even + Character.toString(scanned[i]);
             }else{
+            //assigned odd characters to odd string
                 odd = odd + Character.toString(scanned[i]);
             }
 
         }
+        //after loop is complete print even space and odd strings (collection of characters) 
         System.out.print(even +" "+ odd );
+        // Print a new line at the end
         System.out.println();
     }
 }
